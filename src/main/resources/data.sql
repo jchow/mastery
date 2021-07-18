@@ -1,0 +1,2 @@
+INSERT INTO products (name, category, sub_category, quantity) VALUES ('apple', 'veggie', 'fruit', '2000')
+INSERT INTO products (name, category, sub_category, quantity) VALUES ('lotion', 'health', 'skin', '340')
