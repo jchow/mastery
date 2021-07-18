@@ -9,6 +9,13 @@ Feature: Inventory RESTFUL API
     When user send 'CREATE' to RESTFUL API
     Then it returns 'IS SUCCESSFUL'
 
+    Given user wants to create a product with the following attributes
+      | name  | category | sub-category | quantity |
+      | apple | clothes    |  shoe   | 101  |
+
+    When user send 'CREATE' to RESTFUL API
+    Then it returns 'INVALID PRODUCT'
+
 
   Scenario: View a product
 

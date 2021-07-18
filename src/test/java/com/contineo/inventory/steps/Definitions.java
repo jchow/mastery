@@ -11,6 +11,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
+import org.springframework.http.HttpStatus;
 
 import java.util.List;
 import java.util.Map;
@@ -81,6 +82,9 @@ public class Definitions extends InventoryApplicationTests {
     public void it_returns(String expected) {
         if (expected.equals("IS SUCCESSFUL")) {
             Assert.assertEquals(200, response.statusCode());
+        } else if (expected.equals("INVALID PRODUCT")){
+            Assert.assertEquals(500, response.statusCode());
+            Assert.assertEquals("Product has invalid category: Product[product_id=0, name=apple, category=clothes, sub_category=shoe, quantity=101]", response.body().prettyPrint());
         }
     }
 }

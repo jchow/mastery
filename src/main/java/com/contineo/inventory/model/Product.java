@@ -75,6 +75,7 @@ public class Product {
                 ", name=" + name +
                 ", category=" + category +
                 ", sub_category=" + sub_category +
-                ", quantity=" + quantity;
+                ", quantity=" + quantity +
+                "]";
     }
 }
